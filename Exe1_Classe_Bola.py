@@ -13,7 +13,7 @@ class Bola:
         self.raio = raio
     
     def trocaCor(self,cor2):
-        self.cor = cor2
+        self.cor = cor
 
     def mostraCor(self):
         print(f"Cor: {self.cor}")
@@ -26,7 +26,6 @@ cor = input("Qual a cor da bola?: ")
 raio = int(input("Digite o raio: "))
 bola = Bola(cor,raio)
 Bola.mostraCor()
-cor2 = input("Digite a cor para trocar: ")
-Bola.trocaCor(cor2)
+Bola.trocaCor("azul")
 Bola.mostraCor()
 print(f"Area: {Bola.Area}")
