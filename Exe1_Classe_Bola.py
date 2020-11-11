@@ -13,7 +13,7 @@ class Bola:
         self.material = material
 
     def trocaCor(self):
-        troca = input(f"Quer trocar de cor? s/n: {self.cor}").lower()
+        troca = input("Quer trocar de cor? s/n: ").lower()
         if troca == "s":
             nova_cor = input("Nova cor: ")
         else:
@@ -35,3 +35,4 @@ def main():
             break
         bola1.mostraCor()
     
+main()
