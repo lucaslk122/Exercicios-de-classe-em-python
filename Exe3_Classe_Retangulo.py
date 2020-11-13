@@ -10,11 +10,15 @@ class Retangulo():
         self.ladoA = ladoA
         self.ladoB = ladoB
 
-    def Area(self, ladoA,ladoB):
-        return ladoA * ladoB
+    def Area(self, ladoA = 0, ladoB = 0, lado_novoA = 0, lado_novoB = 0):
+        return ladoA * ladoB or lado_novoA * lado_novoB
 
-    def Perimetro(self, ladoA,ladoB):
-        return 2 * (ladoA + ladoB)
+    def Perimetro(self, ladoA = 0, ladoB = 0, lado_novoA = 0, lado_novoB = 0):
+        return 2 * (ladoA + ladoB) or 2 * (lado_novoA + lado_novoB)
+
+    def MudaLado(self,ladoA,ladoB):
+        self.ladoA = ladoA
+        self.ladoB = ladoB
 
 def main():
     ladoA = int(input("Digite um valor para o lado do retangulo: "))
@@ -22,14 +26,15 @@ def main():
     retangulo = Retangulo(ladoA,ladoB)
     print(f"Area do retangulo: {retangulo.Area(ladoA,ladoB)} m^2")
     print(f"Perimetro do retangulo: {retangulo.Perimetro(ladoA,ladoB)} m^2")
-    """
-    troca = input("Dseja trocar o valor do lado? s/n: ").lower()
+    troca = input("Dseja trocar o valor dos lados? s/n: ").lower()
     if troca == "s":
-        lado_novo = int(input("Digite o novo valor: "))
-        quadrado.MudaLado(lado_novo)
-        print((f"A nova area é {quadrado.Area(lado_novo)} m^2"))
+        lado_novoA = int(input("Digite o novo valor: "))
+        lado_novoB = int(input("Digite o novo valor: "))
+        retangulo.MudaLado(lado_novoA, lado_novoB)
+        print((f"A nova area é {retangulo.Area(lado_novoA, lado_novoB,)} m^2"))
+        print((f"O nova perimetro é {retangulo.Perimetro(lado_novoA, lado_novoB,)} m"))
     else:
-        print("A area continua a mesma")
-    """
+        print("A area e o perimetro continuam os mesmos")
+
 
 main()
