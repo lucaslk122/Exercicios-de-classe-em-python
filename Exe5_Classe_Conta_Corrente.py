@@ -3,25 +3,20 @@ Classe Conta Corrente: Crie uma classe para implementar uma conta corrente. A cl
 """
 
 class ContaCorrente:
-    
-   def __init__(self, nome:str, saldo:float, numero_conta:int, deposito:float):
+
+   def __init__(self, nome,numero_conta, saldo = 0):
         self.nome = nome
         self.saldo = saldo
         self.numero_conta = numero_conta
-        self.depósito = deposito
-    
+        
     def alterarNome(self, nome):
         self.nome = nome
 
-    def depósito(self, deposito):
-        self.depósito = deposito
+    def depósito(self, valor):
+        self.saldo = self,valor + valor
 
-    def saque(self, saque):
-        self.saque = saque
-
-    def saldo(self, saldo = 0, deposito = 0, saque = 0):
-        saldo = deposito - saque
-        return saldo
+    def saque(self, valor):
+        self.saldo = self.saldo - valor
 
 nome = input("Digite seu nome: ")
 numero_conta = int(input("Digite o numero da conta: "))
@@ -34,3 +29,4 @@ if resposta == "s":
     conta.alterarNome(novo_nome)
 else:
     pass
+print()
