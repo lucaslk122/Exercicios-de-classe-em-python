@@ -13,7 +13,7 @@ class Carro:
         self.consumo = consumo
         self.nivelCombustivel = 0
 
-    def Andar(self, distancia):
+    def andar(self, distancia):
         temp = distancia / self.consumo
         self.nivelCombustivel -= temp
 
@@ -23,12 +23,8 @@ class Carro:
     def adicionarGasolina(self, quantidade):
         self.nivelCombustivel += quantidade
 
-veiculo = input("Qual é seu carro?: ")
-consumo = int(input(f"Digite o consumo de combustivel do carro {veiculo}: "))
-meu_carro = Carro(consumo)
-quantidade = int(input("Digite quanto de gasolina quer adicionar: "))
-meu_carro.adicionarGasolina(quantidade)
-distancia = int(input("Digite a distancia percorrida: "))
-meu_carro.Andar(distancia)
-print(meu_carro)
-print(meu_carro.obterGasolina())
+meuFusca = Carro(8)
+meuFusca.adicionarGasolina(50)
+meuFusca.andar(300)
+print(vars(meuFusca))
+print(meuFusca.obterGasolina())
