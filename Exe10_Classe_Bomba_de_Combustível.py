@@ -19,3 +19,13 @@ class BombaCombustível:
         self.tipoCombustivel = tipoCombustivel
         self.valorLitro = valorLitro
         self.quantidadeCombustivel = quantidadeCombustivel
+
+    def abastecerPorValor(self,valorLitro, quantidadeCombustivel):
+        return valorLitro * quantidadeCombustivel
+
+
+tipoCombustivel = input("Qual é o tipo de combustivel: ")
+valorLitro = float(input("Qual o valor por litro do combustivel?: "))
+quantidadeCombustivel = float(input("Informe a quantidade de combustivel: "))
+posto = BombaCombustível(tipoCombustivel, valorLitro, quantidadeCombustivel)
+print(f"Valor a ser pago: R${posto.abastecerPorValor(valorLitro, quantidadeCombustivel)}")
