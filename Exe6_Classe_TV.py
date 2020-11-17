@@ -3,28 +3,29 @@ Classe TV: Faça um programa que simule um televisor criando-o como um objeto. O
 """
 
 class TV:
-    def __init__(self, canal, volume):
-        self.canal = canal
-        self.volume = volume
+    def __init__(self):
+        self.Canal(0)
+        self.volume = 0
 
-    def canal(self, numero):
-        if numero.isdigt():
-            num = numero
-            if num > 0 and num <= 100:
-                self.canal = num
-        else:
-            print("Canal deve ser apenas numeros")
+    def Canal(self, canal):
+        if canal > 0 and canal <= 100:
+            self.canal = canal
 
-    def volume(self, numero):
-        if numero.isdigt():
-            num = numero
-            if num >= 0 and num <= 100:
-                self.volume = num
-            else:
-                print("O volume de ser entra 0 e 100")
-        else:
-            print("O volume de ser apenas numeros")
+    def Aumentavolume(self):
+        if self.volume < 100:
+            self.volume += 1
 
+    def DiminuiVolume (self):
+        if self.volume > 0 :
+            self.volume += 1
+
+televisao = TV()
 canal = int(input("Digite o canal: "))
-volume = int(input("Digite o volume: "))
-televisão = TV(canal,volume)
+televisao.Canal(canal)
+print(vars(televisao))
+#aumentaVolume = int(input("Aumente o volume: "))
+televisao.Aumentavolume()
+print(vars(televisao))
+#diminuivolume = int(input("Diminua o volume: "))
+televisao.DiminuiVolume()
+print(vars(televisao))
