@@ -14,3 +14,8 @@ alterarQuantidadeCombustivel( ) – altera a quantidade de combustível restante
 OBS: Sempre que acontecer um abastecimento é necessário atualizar a quantidade de combustível total na bomba.
 """
 
+class BombaCombustível:
+    def __init__(self, tipoCombustivel, valorLitro, quantidadeCombustivel):
+        self.tipoCombustivel = tipoCombustivel
+        self.valorLitro = valorLitro
+        self.quantidadeCombustivel = quantidadeCombustivel
