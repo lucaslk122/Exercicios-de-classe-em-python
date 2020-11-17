@@ -41,9 +41,8 @@ pergunta = input("Deseja mudar os parametros? s/n: ").lower()
 if pergunta == "n":
     pass
 else:
-    novo_combustivel = input("Qual será o combustivel?: ")
-    novo_valorLitro = float(input("Digite o valor do litro do combustivel: "))
-    novo_qtdCombustivel = float(input("Informe a quantidade de combustivel: "))
-    BombaCombustível.alterarCombustivel(novo_combustivel)
-    BombaCombustível.alterarValor(novo_valorLitro)
-    print(f"Valor a ser pago pelo combutivel {novo_combustivel}: R${posto.alterarQuantidadeCombustivel(novo_valorLitro, novo_qtdCombustivel)}")
+    tipoCombustivel = input("Qual será o combustivel?: ")
+    valorLitro = float(input("Digite o valor do litro do combustivel: "))
+    quantidadeCombustivel = float(input("Informe a quantidade de combustivel: "))
+    BombaCombustível.alterarCombustivel(valorLitro, quantidadeCombustivel)
+    print(f"Valor a ser pago pelo combutivel {tipoCombustivel}: R${posto.alterarQuantidadeCombustivel(valorLitro, quantidadeCombustivel)}")
