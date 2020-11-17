@@ -9,26 +9,28 @@ class ContaCorrente:
 
     def alterarNome(self, nome):
         self.nome = nome
-        return self.nome
 
     def depósito(self, deposito):
         self.saldo += deposito
-        return self.saldo
 
-    def saque(self,saque):
-        self.saldo -= saque
-        return self.saldo
+    def saque(self, valor):
+        if (self.saldo >= valor):
+            self.saldo -= valor
+
 
 nome = input("Digite seu nome: ")
 numero_conta = int(input("Digite o numero da conta: "))
-conta = ContaCorrente(nome, numero_conta)
+saldo = int(input("Digite o valor do saldo: "))
+conta = ContaCorrente(nome, numero_conta, saldo)
+print(vars(conta))
 resposta = input("Dseja trocar de nome? s/n: ").lower()
 if resposta == "s":
-    novo_nome = input("Digite o novo nome: ") 
-    conta.alterarNome(novo_nome)
+    nome = input("Digite o novo nome: ") 
+    conta.alterarNome(nome)
 else:
     pass
 deposito = float(input("Digite o valor do deposito: "))
 conta.depósito(deposito)
 saque = float(input("Digite o valor do saque: "))
 conta.saque(saque)
+print(vars(conta))
