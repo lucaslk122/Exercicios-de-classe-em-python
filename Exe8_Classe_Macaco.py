@@ -24,6 +24,11 @@ m2 = Macaco(nome_macaco2)
 comer1 = input(f"O que o macaco {nome_macaco1} vai comer?: ")
 comer2 = input(f"O que o macaco {nome_macaco2} vai comer?: ")
 m1.Comer(comer1)
+m1.VerBucho()
+m1.digerir()
+m1.VerBucho()
 m2.Comer(comer2)
+m2.Comer(m1)
+m2.VerBucho()
 
 
