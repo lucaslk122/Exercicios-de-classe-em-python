@@ -37,6 +37,9 @@ class BichinhoVirtual:
         else:
             print("Seu bichinho não tem saude o suficiente")
 
+    def str(self):
+        return (f"Nome: {self.nome}, Fome: {self.fome}, saúde: {self.saude}, idade: {self.idade}")
+
 nome = input("Digite o nome: ")
 fome = int(input("Digite a fome: "))
 saude = int(input("Digite a saude: "))
@@ -48,3 +51,4 @@ bichinho.Alimento(alimentacao)
 print(f"Humor do seu tamaguchi: {bichinho.Humor()}")
 brincar = int(input("Quanto deseja brincar?: "))
 print(f"Humor do seu tamaguchi: {bichinho.Humor()}")
+print(bichinho.str())
