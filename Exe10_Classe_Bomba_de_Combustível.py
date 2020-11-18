@@ -44,5 +44,5 @@ else:
     tipoCombustivel = input("Qual será o combustivel?: ")
     valorLitro = float(input("Digite o valor do litro do combustivel: "))
     quantidadeCombustivel = float(input("Informe a quantidade de combustivel: "))
-    BombaCombustível.alterarCombustivel(valorLitro, quantidadeCombustivel)
+    posto = BombaCombustível(tipoCombustivel, valorLitro, quantidadeCombustivel)
     print(f"Valor a ser pago pelo combutivel {tipoCombustivel}: R${posto.alterarQuantidadeCombustivel(valorLitro, quantidadeCombustivel)}")
