@@ -7,10 +7,10 @@ import random
 class BichinhoVirtual:
 
     def __init__(self, nome, fome, saude, idade):
-        self.setNome(nome)
-        self.setfome(fome)
-        self.setsaude(saude)
-        self.setIdade(idade)
+        self.setNome = nome
+        self.setfome = fome
+        self.setsaude = saude
+        self.setIdade = idade 
 
     def setNome(self, nome):
         self.nome = nome        
