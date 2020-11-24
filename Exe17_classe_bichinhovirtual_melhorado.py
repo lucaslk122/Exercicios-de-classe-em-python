@@ -48,7 +48,7 @@ class BichinhoVirtual:
             self.saude += self.saude * ( quantidade / 100)
 
     def str(self):
-        return (f"Nome: {self.getNome}, Fome: {self.getFome}, saúde: {self.getSaude}, idade: {self.getIdade}")
+        return (f"Nome: {str(self.getNome)}, Fome: {str(self.getFome)}, saúde: {str(self.getSaude)}, idade: {str(self.getIdade)}")
 
 
 bicho1 = BichinhoVirtual("lucas", random.randint(0,10), random.randint(0,10),25)
