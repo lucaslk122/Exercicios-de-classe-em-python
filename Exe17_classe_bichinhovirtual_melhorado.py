@@ -41,7 +41,7 @@ class BichinhoVirtual:
 
     def Alimenta(self, quantidade):
         if quantidade >=0 and quantidade <= 100:
-            self.nome -= self.fome * (quantidade /100)
+            self.fome -= self.fome * (quantidade /100)
 
     def Brincar (self, quantidade):
         if quantidade >= 0 and quantidade <= 100:
@@ -69,12 +69,14 @@ while True:
     
     if (op == 1):
         alimento = input("Alimentar todos com: ")
+        quantidade = int(input("quantidade: "))
         for i in range(3):
-            fazenda[i].alimenta(alimento)
+            fazenda[i].Alimenta(quantidade)
     elif(op ==2):
         brinquedo = input("Brincar todos com: ")
+        quantidade = int(input("quantidade: "))
         for i in range(3):
-            fazenda[i].brincar(brinquedo)
+            fazenda[i].Brincar(quantidade)
     elif(op == 3):
         for i in range(3):
             print(fazenda[i].getNome() + ": " + str(fazenda[i].humor()))
